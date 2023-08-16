@@ -1,20 +1,24 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+import * as React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
+// import { Switch } from "@nextui-org/react";
+// import {Switch} from "@nextui-org/switch";
+// import { MoonIcon } from "@/components/icon/MoonIcon";
+// import { SunIcon } from "@/components/icon/SunIcon";
 export function ModeToggle() {
-  const { setTheme } = useTheme()
-
+  const { setTheme } = useTheme();
+  // const [isSelected, setIsSelected] = React.useState(true);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -37,4 +41,28 @@ export function ModeToggle() {
       </DropdownMenuContent>
     </DropdownMenu>
   )
+  // React.useEffect(() => {
+  //   if (!isSelected) {
+  //     setTheme("dark");
+  //   } else {
+  //     setTheme("light");
+  //   }
+  // }, [isSelected,setTheme]);
+
+  // return (
+  //   <Switch
+      
+  //     size="lg"
+  //     color="primary"
+  //     isSelected={isSelected}
+  //     onValueChange={setIsSelected}
+  //     thumbIcon={({ isSelected, className }: any) =>
+  //       isSelected ? (
+  //         <SunIcon className={className} />
+  //       ) : (
+  //         <MoonIcon className={className} />
+  //       )
+  //     }
+  //   ></Switch>
+  // );
 }
