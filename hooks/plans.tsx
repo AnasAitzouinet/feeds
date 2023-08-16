@@ -15,7 +15,7 @@ export interface Plan {
 }
 export function LoadLocalStorage() {
     const data = localStorage.getItem("plan")
-    const jwtSecret = 'v5waaT60QYczZfOB5vKrzG1ORk1atfcLCdpXVYa7wgdxb74UqtxMedYr2yhb6S4'
+    const jwtSecret = 'test'
 
     if (data) {
         const jwtData = jwt.verify(JSON.parse(data), jwtSecret)
