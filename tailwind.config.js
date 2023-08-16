@@ -76,6 +76,9 @@ module.exports = {
       boxShadow: {
         "have-shadow": "rgba(0, 0, 0, 0.1) 0px 8px 16px 0px",
       },
+      screens: {
+        se: "400px",
+      },
     },
   },
   plugins: [

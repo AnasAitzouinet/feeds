@@ -77,7 +77,7 @@ const Address = () => {
         Choose an address{" "}
       </h1>
       <Separator className="mt-2 rounded-xl" />
-      <article className="grid grid-cols-2 my-6 mx-5 px-10 gap-10 ">
+      <article className="grid md:grid-cols-2 md:my-6 md:mx-5 se:mx-2 se:my-4 px-10  se:gap-1   sm:gap-10 ">
         <div className="flex flex-col gap-5 py-2">
           <InputText
             label="Full Name"
