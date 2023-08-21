@@ -42,16 +42,18 @@ const data = [
 const Profile = () => {
   const [datas, setData] = useState(data);
   return (
-    <div className="grid grid-cols- gap-2">
-      <aside className="p-5">
-        <h1 className="sm:text-xl text-md text-center text-neutral-800 ">
+    <div className="grid gap-1">
+      <header className="pt-4 px-2">
+        <h1 className="text-md sm:text-xl text-center text-neutral-800 ">
           What describe your food type
         </h1>
-        <h3 className="sm:text-sm text-[11px] pt-1 sm:pt-0 text-center text-neutral-500">
+        <h3 className=" text-xs pt-1  text-center text-neutral-500">
           Your preferences help us show you the most relevant recipes first.
           You&apos;ll still have access to all recipes each week!
         </h3>
-        <main className="py-5 px-4 grid grid-cols-2 sm:grid-cols-3 gap-5    ">
+      </header>
+
+        <main className="py-2 px-4 grid grid-cols-2 sm:grid-cols-3 gap-5    ">
           {datas.map((item) => (
             <Card
               radius="lg"
@@ -74,24 +76,19 @@ const Profile = () => {
                 );
               }}
             >
-              <CardBody className="overflow-visible ">
-                <h3 className={item.selected ? 'text-sm text-green-600 ' : 'text-sm text-neutral-800'}>{item.title}</h3>
+              <CardBody className="overflow-visible p-5">
+                <h3 className={item.selected ? 'text-xs text-green-600 ' : 'text-xs p-0 text-neutral-800'}>{item.title}</h3>
                 <Image
                   shadow="sm"
                   width="100%"
                   alt={item.title}
-                  className="w-full h-[30px] se:h-[80px] md:h-[100px]"
+                  className="w-full h-[30px]  sm:h-[100px]"
                   src={item.image}
                 />
               </CardBody>
             </Card>
           ))}
         </main>
-      </aside>
-      {/* <Separator/> */}
-      {/* <aside>
-        test
-      </aside> */}
     </div>
   );
 };

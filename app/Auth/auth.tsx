@@ -13,10 +13,10 @@ interface props {
 const Auth = ({ session }: props) => {
   return (
     <main className="relative flex flex-row justify-center items-center h-screen w-screen">
-      <div className="absolute top-10 right-10">
+      <div className="absolute top-4 right-4">
         <ModeToggle />
       </div>
-      <Tabs defaultValue="Sign-In" className="w-[30rem] ">
+      <Tabs defaultValue="Sign-In" className="w-[15rem] sm:w-[30rem] ">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="Sign-In">Sign-In</TabsTrigger>
           <TabsTrigger value="Sign-up">Sign-up</TabsTrigger>

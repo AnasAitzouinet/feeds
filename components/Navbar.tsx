@@ -17,7 +17,8 @@ import {
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
@@ -27,20 +28,20 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg  relative">
+    <header className=" shadow-lg  ">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto sticky flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-8 p-1.5">
             <span className="sr-only">Feeds</span>
             <Image
-              src="/logo.png"
-              className="h-10 w-auto"
+              src="/zd4.svg"
+              className="h-20 p-1 sm:p-0 object-cover w-auto"
               alt="logo of feeds company"
-              width={100}
-              height={100}
+              width={500}
+              height={500}
             />
           </a>
         </div>
@@ -55,9 +56,9 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
-          <a
+          <a 
             href="#pricing"
-            className="text-sm  font-semibold leading-6 text-gray-900 hover:text-green-700"
+            className="text-sm  rounded-full font-semibold leading-6 text-gray-900 hover:text-green-700"
           >
             Our plans
           </a>
@@ -75,8 +76,10 @@ export default function Example() {
           </a>
         </Popover.Group>
         <div className="hidden gap-2 lg:flex lg:flex-1 lg:justify-end">
-          <Button className="border border-green-400 w-[30%] bg-white text-green-600 hover:bg-green-400 hover:text-white">
-            <a href="/Auth">Sign in</a>
+          <Button className="border border-green-400 w-[30%]  bg-white text-green-600 hover:bg-green-400 hover:text-white">
+            <Link 
+           prefetch={false}
+           href="/Auth">Sign in</Link>
           </Button>
         </div>
       </nav>
@@ -89,14 +92,14 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-8 p-2">
               <span className="sr-only">Feeds</span>
               <Image
-                src="/logo.png"
-                className="h-10 w-auto"
+                src="/zd4.svg"
+                className="h-20 p-1 sm:p-0 object-cover w-auto"
                 alt="logo of feeds company"
-                width={100}
-                height={100}
+                width={500}
+                height={500}
               />
             </a>
             <button

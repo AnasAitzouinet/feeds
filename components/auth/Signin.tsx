@@ -80,8 +80,8 @@ function Signin({ session }: props) {
       <form onSubmit={handleSubmit}>
         <Toaster />
         <CardHeader>
-          <CardTitle>Welcome to feeds</CardTitle>
-          <CardDescription>Log in to your Account :</CardDescription>
+          <CardTitle className="text-md sm:text-2xl">Welcome to feeds</CardTitle>
+          <CardDescription className="">Log in to your Account :</CardDescription>
         </CardHeader>
         <CardContent className="space-y-2">
           <div className="space-y-1">

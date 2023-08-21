@@ -96,18 +96,18 @@ function Signun({ session }: props) {
   }, [password, confirmPassword]);
 
   return (
-    <Card>
+    <Card className="h-[80vh]">
       <form onSubmit={handleSubmit}>
         <Toaster />
-        <CardHeader>
-          <CardTitle>Welcome to feeds</CardTitle>
-          <CardDescription>Create your account:</CardDescription>
+        <CardHeader className="py-3 sm:pb-2 sm:pt-5">
+          <CardTitle className="text-md sm:text-2xl" >Welcome to feeds</CardTitle>
+          <CardDescription className="text-sm sm:text-md">Create your account:</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-2">
+        <CardContent className="py-2 px-5">
           <div className="space-y-1">
             <Label
               htmlFor="fname"
-              className={error.Fullname ? "text-red-500" : ""}
+              className={error.Fullname ? "text-red-500 text-xs sm:text-sm" : " text-xs sm:text-sm"}
             >
               Full name
             </Label>
@@ -118,7 +118,7 @@ function Signun({ session }: props) {
               onChange={(e) => setFullName(e.target.value)}
             />
             {error.Fullname ? (
-              <p className="text-red-500 text-xs italic">
+              <p className="text-red-500 text-[10px]  sm:text-xs italic">
                 Can&apos;t be empty!
               </p>
             ) : (
@@ -126,7 +126,7 @@ function Signun({ session }: props) {
             )}
           </div>
           <div className="space-y-1">
-            <Label htmlFor="name" className={error.email ? "text-red-500" : ""}>
+            <Label htmlFor="name" className={error.email ? "text-red-500 text-xs  sm:text-sm" : " text-xs sm:text-sm"}>
               Email
             </Label>
             <Input
@@ -137,7 +137,7 @@ function Signun({ session }: props) {
               onChange={(e) => setEmail(e.target.value)}
             />
             {error.email ? (
-              <p className="text-red-500 text-xs italic">
+              <p className="text-red-500 text-[10px] text-xs italic">
                 Can&apos;t be empty!
               </p>
             ) : (
@@ -147,7 +147,7 @@ function Signun({ session }: props) {
           <div className="space-y-1">
             <Label
               htmlFor="pass"
-              className={error.password ? "text-red-500" : ""}
+              className={error.password ? "text-red-500 text-xs sm:text-sm" : " text-xs sm:text-sm"}
             >
               Password
             </Label>
@@ -159,7 +159,7 @@ function Signun({ session }: props) {
               onChange={(e) => setPassword(e.target.value)}
             />
             {error.Fullname ? (
-              <p className="text-red-500 text-xs italic">
+              <p className="text-red-500 text-[10px] text-xs italic">
                 Can&apos;t be empty!
               </p>
             ) : (
@@ -167,7 +167,7 @@ function Signun({ session }: props) {
             )}
           </div>
           <div className="space-y-1">
-            <Label htmlFor="con-pass" className={match ? "text-red-500" : ""}>
+            <Label htmlFor="con-pass" className={match ? "text-red-500 text-xs sm:text-sm" : " text-xs sm:text-sm"}>
               Confirm Password
             </Label>
             <Input
@@ -180,7 +180,7 @@ function Signun({ session }: props) {
               }}
             />
             {match ? (
-              <p className="text-red-500 text-xs italic">
+              <p className="text-red-500 text-[10px] text-xs italic">
                 Password does not match.
               </p>
             ) : (
@@ -188,8 +188,8 @@ function Signun({ session }: props) {
             )}
           </div>
         </CardContent>
-        <CardFooter className="flex flex-col items-start gap-5">
-          <div className="flex items-center pl-2 space-x-2">
+        <CardFooter className="flex flex-col items-start gap-2 p-0 sm:px-5">
+          <div className="flex items-center pl-2 space-x-2 ">
             <Checkbox
               id="termss"
               onCheckedChange={(checked) => {
@@ -201,12 +201,12 @@ function Signun({ session }: props) {
             />
             <label
               htmlFor="termss"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="text-xs  sm:text-sm w-full font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               Accept terms and conditions
             </label>
             {error.check ? (
-              <p className="text-red-500 text-xs italic">Must check</p>
+              <p className="text-red-500 text-[10px] italic">Must check</p>
             ) : (
               ""
             )}
@@ -223,14 +223,14 @@ function Signun({ session }: props) {
             />
             <label
               htmlFor="terms"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="text-xs  sm:text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               Remember me
             </label>
           </div>
           <Button
             type="submit"
-            className="w-full bg-gray-800 text-white dark:hover:bg-gray-100 dark:hover:text-gray-800"
+            className="w-full px-0 h-8 text-xs bg-gray-800 text-white dark:hover:bg-gray-100 dark:hover:text-gray-800"
             variant="outline"
           >
             Register

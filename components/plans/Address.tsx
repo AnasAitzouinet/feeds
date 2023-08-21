@@ -69,7 +69,7 @@ const Address = () => {
     <div>
       <h1
         className="
-  text-2xl text-center font-lighter text-gray-900 dark:text-foreground
+  text-md sm:text-2xl text-center font-lighter text-gray-900 dark:text-foreground
   leading-snug tracking-wide pt-2
   "
       >
@@ -77,8 +77,8 @@ const Address = () => {
         Choose an address{" "}
       </h1>
       <Separator className="mt-2 rounded-xl" />
-      <article className="grid md:grid-cols-2 md:my-6 md:mx-5 se:mx-2 se:my-4 px-10  se:gap-1   sm:gap-10 ">
-        <div className="flex flex-col gap-5 py-2">
+      <article className="grid sm:grid-cols-2 px-8 py-2 se:gap-1   sm:gap-10 ">
+        <div className="flex flex-col gap-5 py-1">
           <InputText
             label="Full Name"
             placeholder="Full Name"
@@ -110,7 +110,7 @@ const Address = () => {
             success={phone.success}
           />
         </div>
-        <div className="w-full h-full flex flex-col justify-center items-center gap-5">
+        <div className="hidden w-full h-full sm:flex flex-col justify-center items-center gap-5">
           <Image
             src="/meme1.gif"
             alt="map"

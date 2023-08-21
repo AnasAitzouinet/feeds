@@ -49,7 +49,7 @@ const InputText = ({
     <div>
       <label
         htmlFor={IdLabel}
-        className="block text-sm font-medium text-gray-700"
+        className="block text-xs sm:text-sm font-medium text-gray-700"
       >
         {label}
       </label>
